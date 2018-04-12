@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.User.AfficherDemandeRoleController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="556.0" prefWidth="200.0" style="-fx-background-color: CDCDCDCD;">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="117.0" layoutX="48.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo-2.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="home" layoutX="6.0" layoutY="153.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Page d'acceuil">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="7.0" layoutY="207.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Annonces">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="369.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Forum">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="315.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Evenements">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="422.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Réclamations">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="262.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: BDBDBDBD;" text="Services">
+               <font>
+                  <Font name="Buxton Sketch" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Label layoutX="246.0" layoutY="110.0" text="Nom de l'utilisateur:" />
+      <Label layoutX="246.0" layoutY="147.0" text="Role demandé:" />
+      <Label layoutX="246.0" layoutY="189.0" text="Demande:" />
+      <Label layoutX="246.0" layoutY="229.0" text="Document original:" />
+      <JFXTextField fx:id="username" layoutX="394.0" layoutY="98.0" />
+      <JFXTextField fx:id="nvrole" layoutX="394.0" layoutY="135.0" />
+      <JFXTextField fx:id="demande" layoutX="394.0" layoutY="185.0" />
+      <ImageView fx:id="image" fitHeight="202.0" fitWidth="294.0" layoutX="248.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="334.0" layoutY="31.0" text="Demande" />
+      <JFXButton fx:id="valider" layoutX="274.0" layoutY="479.0" onAction="#Valider" text="Valider" />
+      <JFXButton fx:id="supp" layoutX="416.0" layoutY="479.0" onAction="#ActionSupp" text="Supprimer" />
+   </children>
+</AnchorPane>

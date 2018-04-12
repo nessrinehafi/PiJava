@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AccueilGroupeController">
+   <children>
+      <ImageView fitHeight="2022.0" fitWidth="2320.0" layoutX="-14.0" layoutY="-205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/superthumb%20(2).jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="128.0" prefWidth="2000.0">
+         <children>
+            <ToolBar layoutX="192.0" prefHeight="99.0" prefWidth="1828.0">
+               <items>
+                  <JFXButton fx:id="accueil" onAction="#accueil" prefHeight="124.0" prefWidth="213.0" text="Accueil" textFill="#212122">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="evenement" onAction="#evenement" prefHeight="124.0" prefWidth="197.0" text="Evenemmets" textFill="#262728">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="service" onAction="#service" prefHeight="124.0" prefWidth="166.0" text="Services" textFill="#414243">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="forum" onAction="#forum" prefHeight="124.0" prefWidth="183.0" text="Forum" textFill="#222325">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="reclamation" onAction="#reclamation" prefHeight="124.0" prefWidth="214.0" text="Réclamations" textFill="#222325">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="annonce" onAction="#annonce" prefHeight="124.0" prefWidth="220.0" text="Annonces" textFill="#222325">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator orientation="VERTICAL" prefHeight="124.0" prefWidth="18.0" />
+                  <JFXButton fx:id="rdv" onAction="#rdv" prefHeight="124.0" prefWidth="383.0" text="Prendre un rendez-vous" textFill="#222325">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </JFXButton>
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="124.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo-2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

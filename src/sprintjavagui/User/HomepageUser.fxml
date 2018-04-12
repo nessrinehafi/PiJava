@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.User.HomepageUserController">
+   <children>
+      <Pane prefHeight="127.0" prefWidth="777.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="163.0" layoutY="21.0" prefHeight="17.0" prefWidth="140.0" text="Appelez nous aujourd'hui:" />
+            <Label layoutX="182.0" layoutY="47.0" prefHeight="17.0" prefWidth="103.0" text="+21694173318" />
+            <Label layoutX="327.0" layoutY="21.0" text="Notre emplacement:" />
+            <Label layoutX="334.0" layoutY="39.0" text="Esprit Ghazela" />
+            <Label layoutX="475.0" layoutY="21.0" text="Notre email:" />
+            <Label layoutX="462.0" layoutY="39.0" text="zanimaux@gmail.com" />
+            <MenuBar layoutY="93.0" prefHeight="25.0" prefWidth="776.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Acceuil">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Annonces">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Services">
+                     <items>
+                        <MenuItem fx:id="listeVet" mnemonicParsing="false" onAction="#ListVetPage" onMenuValidation="#ListVetPage" text="Vétérinaires">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/10-512.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="listePet" mnemonicParsing="false" text="Education canine">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/téléchargement.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="listeEd" mnemonicParsing="false" text="Garde pour animaux">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/dog-house-outline-md.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Favoris">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/add-favorite-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Forum">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Réclamations">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="A propos de nous">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <ImageView fitHeight="84.0" fitWidth="140.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userphoto" fitHeight="53.0" fitWidth="53.0" layoutX="712.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="username" layoutX="710.0" layoutY="56.0" text="username" textFill="#f80202">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="role" layoutX="711.0" layoutY="74.0" text="role" textFill="#362727">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

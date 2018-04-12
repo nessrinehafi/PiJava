@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilController">
+   <children>
+      <ImageView fitHeight="271.0" fitWidth="600.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hamouda.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="271.0" fitWidth="600.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hamouda.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="114.0" fitWidth="157.0" layoutX="38.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Vente.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="125.0" fitWidth="114.0" layoutX="246.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Adoption.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="142.0" layoutX="412.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/lost1.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="vendre" layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#Vente" style="-fx-background-color: #dd0505;" text="Animaux a vendre" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="adopter" layoutX="202.0" layoutY="259.0" mnemonicParsing="false" onAction="#Adopter" prefHeight="39.0" prefWidth="185.0" style="-fx-background-color: #dd0505;" text="Animaux a adopter" textFill="#f6f5f8">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="lost" layoutX="395.0" layoutY="259.0" mnemonicParsing="false" onAction="#Lost" style="-fx-background-color: #dd0505;" text="Animaux Lost&amp;Found" textFill="#eeebf2">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Button>
+      <Label layoutX="206.0" layoutY="21.0" prefHeight="55.0" prefWidth="196.0" text="Annonces" textFill="#dd0505">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font></Label>
+      <Button fx:id="profil" layoutX="486.0" layoutY="21.0" mnemonicParsing="false" onAction="#Profil" prefHeight="39.0" prefWidth="87.0" style="-fx-background-color: #dd0505;" text="Profil" textFill="#f4f4f8">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+      <Button fx:id="admin" layoutX="38.0" layoutY="21.0" mnemonicParsing="false" onAction="#Admin" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #dd0505;" text="Admin" textFill="#fbfafc">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

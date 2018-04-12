@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="woh" prefHeight="400.0" prefWidth="600.0" stylesheets="@profiluserr.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.User.DemandeRoleController">
+   <children>
+      <Pane layoutX="-4.0" layoutY="50.0" prefHeight="378.0" prefWidth="757.0" styleClass="bodybg" stylesheets="@profiluserr.css">
+         <children>
+            <Pane layoutX="117.0" layoutY="47.0" prefHeight="245.0" prefWidth="537.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="my-style" stylesheets="@profiluserr.css">
+               <children>
+                  <JFXTextArea fx:id="demande" focusColor="#ff4e63" layoutX="214.0" layoutY="75.0" prefHeight="74.0" prefWidth="303.0" />
+                  <Label layoutX="75.0" layoutY="95.0" text="Demande:">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="14.0" text="Role demandé:">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="194.0" text="Document original:">
+                     <font>
+                        <Font name="Consolas Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="nvrole" focusColor="#ff4e63" layoutX="214.0" layoutY="14.0" prefHeight="25.0" prefWidth="138.0" promptText="Roles" />
+                  <ImageView fx:id="pic" fitHeight="150.0" fitWidth="200.0" layoutX="337.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                  <JFXButton fx:id="image" layoutX="239.0" layoutY="182.0" onAction="#addImage" opacity="0.76" prefHeight="42.0" prefWidth="33.0" text="Button">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/oYPS__file_document_add_plus_sheet_paper_page_text-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="valider" layoutX="324.0" layoutY="325.0" onAction="#ajouterDemande" style="-fx-background-color: #F59B89;" text="Envoyer la demande" textFill="#fffbfb" />
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" prefHeight="51.0" prefWidth="757.0" style="-fx-background-color: black;" stylesheets="@profiluserr.css">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="2.0" layoutY="1.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo-2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="role" layoutX="319.0" layoutY="11.0" prefHeight="28.0" prefWidth="135.0" text="Zanimaux" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="610.0" layoutY="9.0">
+               <children>
+                  <Label fx:id="username" text="username" textFill="#eee8e8" />
+                  <Label fx:id="role" text="role" textFill="#fcf0f0" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="10.0" fitWidth="12.0" layoutX="598.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/green-glossy-icon-hi.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="monprofil" layoutX="706.0" layoutY="5.0" onAction="#Monprofil" prefHeight="41.0" prefWidth="54.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <Circle fx:id="userphoto" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="loggedid" layoutX="558.0" layoutY="19.0" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

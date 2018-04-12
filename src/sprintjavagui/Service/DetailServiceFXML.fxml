@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.Service.DetailServiceFXMLController">
+   <children>
+      <Pane layoutY="49.0" prefHeight="580.0" prefWidth="757.0" styleClass="bodybgg" stylesheets="@../User/profiluserr.css">
+         <children>
+            <Pane layoutX="91.0" layoutY="15.0" prefHeight="521.0" prefWidth="617.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="my-style" stylesheets="@../User/profiluserr.css">
+               <children>
+                  <ImageView fx:id="pic" fitHeight="205.0" fitWidth="264.0" layoutX="177.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="22.0" layoutY="264.0" text="Titre">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="318.0" text="Description">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="268.0" text="Date de création">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="310.0" text="Adresse:">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="351.0" text="Numéro de téléphone:">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="387.0" text="catégorie:">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="421.0" text="User:">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="titre" focusColor="#ff4e63" layoutX="92.0" layoutY="254.0" prefHeight="25.0" prefWidth="171.0" />
+                  <JFXTextField fx:id="datec" editable="false" focusColor="#ff4e63" layoutX="451.0" layoutY="262.0" />
+                  <JFXTextField fx:id="adresse" editable="false" focusColor="#ff4e63" layoutX="451.0" layoutY="305.0" />
+                  <JFXTextField fx:id="numtel" editable="false" focusColor="#ff4e63" layoutX="451.0" layoutY="339.0" />
+                  <JFXTextField fx:id="user" editable="false" focusColor="#ff4e63" layoutX="95.0" layoutY="408.0" prefHeight="25.0" prefWidth="171.0" />
+                  <JFXTextField fx:id="cat" editable="false" focusColor="#ff4e63" layoutX="451.0" layoutY="382.0" />
+                  <JFXButton fx:id="addfav" layoutX="14.0" layoutY="188.0" onAction="#ajouterfav" prefHeight="77.0" prefWidth="255.0" text="Ajouter comme favoris" />
+                  <ImageView fx:id="addfav2" fitHeight="45.0" fitWidth="40.0" layoutX="28.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Emoji_Heard.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="suppfav" layoutX="24.0" layoutY="188.0" onAction="#suppfav" prefHeight="77.0" prefWidth="255.0" text="Supprimer de mes favoris" />
+                  <ImageView fx:id="suppfav2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/heart-broken-icon.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="idS" layoutX="803.0" layoutY="683.0" visible="false" />
+                  <JFXTextArea fx:id="description" editable="false" layoutX="92.0" layoutY="307.0" prefHeight="73.0" prefWidth="171.0" />
+                  <Label layoutX="727.0" layoutY="700.0" />
+                  <TextField fx:id="catservice" layoutX="766.0" layoutY="671.0" visible="false" />
+                  <Label fx:id="estfav" layoutX="672.0" layoutY="631.0" text="Label" />
+               </children>
+            </Pane>
+            <JFXDrawer fx:id="menu" defaultDrawerSize="225.0" prefHeight="580.0" prefWidth="181.0" />
+            <JFXHamburger fx:id="affmenu" layoutX="715.0" layoutY="17.0" prefHeight="20.0" prefWidth="28.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="51.0" prefWidth="757.0" style="-fx-background-color: black;" stylesheets="@../User/profiluserr.css">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="74.0" layoutX="2.0" layoutY="1.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo-2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="role" layoutX="319.0" layoutY="11.0" prefHeight="28.0" prefWidth="135.0" text="Zanimaux" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="645.0" layoutY="10.0">
+               <children>
+                  <Label fx:id="username" text="username" textFill="#eee8e8" />
+                  <Label fx:id="role" text="role" textFill="#fcf0f0" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="10.0" fitWidth="12.0" layoutX="632.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/green-glossy-icon-hi.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="monprofil" layoutX="706.0" layoutY="5.0" prefHeight="41.0" prefWidth="54.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <Circle fx:id="userphoto" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="loggedid" layoutX="558.0" layoutY="19.0" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

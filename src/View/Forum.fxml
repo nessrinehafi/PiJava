@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ForumController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#344a5f" height="558.0" layoutX="-28.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="286.0" />
+      <ImageView fitHeight="97.0" fitWidth="162.0" layoutX="56.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="Ajouter1" layoutX="-16.0" layoutY="186.0" onAction="#AjouterSujetLink" prefHeight="28.0" prefWidth="274.0" style="-fx-background-color: #72C501;" text="Ajouter sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Ajouter11" layoutX="-6.0" layoutY="244.0" onAction="#AfficherSujet" prefHeight="28.0" prefWidth="264.0" style="-fx-background-color: #72C501;" text="Afficher les sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="448.0" layoutY="18.0" text=" Forum" textFill="#72c501">
+         <font>
+            <Font name="American Typewriter" size="38.0" />
+         </font>
+      </Label>
+      <Line endX="10.0" layoutX="564.0" layoutY="62.0" startX="-100.0" stroke="#72c501" strokeMiterLimit="5.0" />
+      <Label layoutX="283.0" layoutY="340.0" prefHeight="20.0" prefWidth="85.0" text="Titre:" textFill="#fdb803">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="titre" layoutX="370.0" layoutY="340.0" prefHeight="10.0" prefWidth="124.0" promptText="Entrer votre Titre">
+         <font>
+            <Font name="American Typewriter" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="286.0" layoutY="382.0" prefHeight="20.0" prefWidth="85.0" text="Tags:" textFill="#fdb803">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tags" layoutX="370.0" layoutY="378.0" prefHeight="10.0" prefWidth="124.0" promptText="Entrer votre Tag">
+         <font>
+            <Font name="American Typewriter" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="269.0" layoutY="423.0" prefHeight="20.0" prefWidth="85.0" text="Contenu:" textFill="#fdb803">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="blog" layoutX="370.0" layoutY="416.0" prefHeight="35.0" prefWidth="124.0" text="votre Contenu Du Sujet">
+         <font>
+            <Font name="American Typewriter" size="10.0" />
+         </font>
+      </JFXTextArea>
+      <Label layoutX="275.0" layoutY="467.0" prefHeight="20.0" prefWidth="85.0" text="Image:" textFill="#fdb803">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="Addimage" layoutX="370.0" layoutY="465.0" onAction="#addImage" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: #701F57;" text="Import Votre Image" textFill="WHITE" />
+      <JFXButton fx:id="Modifier" layoutX="311.0" layoutY="506.0" onAction="#UpdateSujet" prefHeight="28.0" prefWidth="210.0" style="-fx-background-color: #72C501;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="supprimer" layoutX="566.0" layoutY="506.0" onAction="#SupprimerSujet" prefHeight="28.0" prefWidth="210.0" style="-fx-background-color: #72C501;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="Tablev" layoutX="258.0" layoutY="127.0" onMouseClicked="#RemplirUtil" prefHeight="201.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="auteur" prefWidth="75.0" text="Auteur" />
+          <TableColumn fx:id="titre1" prefWidth="109.0" text="Titre" />
+            <TableColumn fx:id="tags1" prefWidth="108.0" text="Tags" />
+            <TableColumn fx:id="Blog1" prefWidth="204.0" text="Contenu" />
+            <TableColumn fx:id="Id" minWidth="0.0" prefWidth="64.0" text="Id" visible="false" />
+            <TableColumn fx:id="auteurid" prefWidth="75.0" text="auteurid" visible="false" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="image" fitHeight="90.0" fitWidth="132.0" layoutX="529.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Label fx:id="id1" layoutX="536.0" layoutY="380.0" prefHeight="17.0" prefWidth="61.0" visible="false" />
+      <JFXTextField fx:id="SujetChercher" layoutX="286.0" layoutY="93.0" onAction="#Search" prefHeight="27.0" prefWidth="210.0" promptText="Chercher Un Sujet">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="AfficheSujet" layoutX="566.0" layoutY="455.0" onAction="#AfficheSujet" prefHeight="28.0" prefWidth="210.0" style="-fx-background-color: #72C501;" text="Afficher Un Sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="image1" fitHeight="111.0" fitWidth="241.0" layoutX="566.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="SignalerSujet" layoutX="698.0" layoutY="93.0" mnemonicParsing="false" onAction="#SignalerSujetAction" style="-fx-background-color: f45c5c;" text="Signaler Sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

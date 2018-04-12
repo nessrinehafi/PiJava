@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AffichageLostAndFoundController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="15.0" prefHeight="400.0" prefWidth="619.0">
+         <children>
+            <ImageView fitHeight="463.0" fitWidth="649.0" layoutX="-10.0" layoutY="-15.0">
+               <image>
+                  <Image url="@../Images/pic2.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="acheterbtn" layoutX="252.0" layoutY="334.0" mnemonicParsing="false" onAction="#itsMine" text="c'est le mien" />
+            <Button fx:id="signalerbtn" layoutX="119.0" layoutY="334.0" mnemonicParsing="false" onAction="#Signaler" prefHeight="25.0" prefWidth="117.0" text="Signaler annonce" />
+            <TableView fx:id="table" layoutX="118.0" layoutY="111.0" prefHeight="185.0" prefWidth="304.0">
+               <columns>
+                  <TableColumn fx:id="animal" prefWidth="75.0" text="Animal" />
+                  <TableColumn fx:id="race" prefWidth="113.0" text="Race" />
+                  <TableColumn fx:id="description" prefWidth="136.0" text="Description" />
+               </columns>
+            </TableView>
+            <Label layoutX="268.0" prefHeight="43.0" prefWidth="357.0" text="Animaux LostAndFound" textFill="#f8f7f7">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font></Label>
+            <Button fx:id="localiserbtn" layoutX="357.0" layoutY="334.0" mnemonicParsing="false" onAction="#localiser" text="Localiser " />
+            <GoogleMapView fx:id="gmap" layoutX="437.0" layoutY="100.0" prefHeight="324.0" prefWidth="193.0" />
+            <TextField fx:id="seach" layoutX="177.0" layoutY="66.0" promptText="recherche" />
+            <ImageView fitHeight="481.0" fitWidth="421.0" layoutX="-313.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/ka7la.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="retour1" layoutX="31.0" layoutY="141.0" mnemonicParsing="false" onAction="#Retour" text="Acceuil" />
+            <Button layoutX="31.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Profil" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

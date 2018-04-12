@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1533.0" prefWidth="2031.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CategorieInterfaceController">
+   <children>
+      <ImageView fitHeight="1591.0" fitWidth="4253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/progress.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="314.0" fitWidth="436.0" layoutX="270.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/01-1-775x517.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="291.0" fitWidth="444.0" layoutX="793.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/12-775x517.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="354.0" fitWidth="427.0" layoutX="1340.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/06-1-775x517.jpg" />
+         </image></ImageView>
+      <Button layoutX="1482.0" layoutY="534.0" mnemonicParsing="false" onAction="#listegarde" prefHeight="66.0" prefWidth="218.0" text="Garde d'animaux">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+      <Button layoutX="949.0" layoutY="551.0" mnemonicParsing="false" onAction="#listevet" prefHeight="66.0" prefWidth="190.0" text="Médical">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+      <Button layoutX="387.0" layoutY="559.0" mnemonicParsing="false" onAction="#listedresseur" prefHeight="66.0" prefWidth="171.0" text="Dressage">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+      <Button layoutX="317.0" layoutY="51.0" mnemonicParsing="false" onAction="#Accueil" prefHeight="76.0" prefWidth="287.0" text="Accueil">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Button>
+      <Button fx:id="rdvattenteuser" layoutX="811.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdvattente" prefHeight="76.0" prefWidth="400.0" text="Mes rendez-vous en attente">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button layoutX="1407.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdvuser" prefHeight="76.0" prefWidth="351.0" text="Mes rendez-vous confirmes">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="listerdvvalider" layoutX="811.0" layoutY="51.0" mnemonicParsing="false" onAction="#listerdvvalider" prefHeight="76.0" prefWidth="400.0" text="Mes rendez-vous à validé">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

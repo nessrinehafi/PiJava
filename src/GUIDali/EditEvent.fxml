@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+
+<AnchorPane id="AnchorPane" prefHeight="671.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditEventController">
+   <children>
+      <Pane prefHeight="105.0" prefWidth="600.0" style="-fx-background-color: #0081FF;">
+         <children>
+            <Text fill="WHITE" layoutX="150.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Evenement" textAlignment="CENTER" wrappingWidth="300.13671875">
+               <font>
+                  <Font name="Roboto Medium" size="27.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" layoutX="567.0" layoutY="31.0" onMouseClicked="#handleCancel" size="22.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="118.0" layoutY="126.0" prefHeight="405.0" prefWidth="343.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="nom" focusColor="#0081ff" labelFloat="true" prefHeight="25.0" prefWidth="343.0" promptText="Nom Event">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="desc" focusColor="#0081ff" labelFloat="true" prefHeight="118.0" prefWidth="343.0" promptText="Description">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="type" focusColor="#0081ff" labelFloat="true" prefHeight="25.0" prefWidth="343.0" promptText="type">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nbplace" focusColor="#0081ff" labelFloat="true" prefHeight="25.0" prefWidth="343.0" promptText="nbplace">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="latitute" promptText="latitute" />
+            <JFXTextField fx:id="longtitude" promptText="longitude" />
+            <LocalDateTimeTextField fx:id="datedeb" />
+            <LocalDateTimeTextField fx:id="datefin" />
+            <AnchorPane>
+               <children>
+                  <ImageView fx:id="pic" fitHeight="113.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="btnupload" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#uploadPhoto" prefHeight="39.0" prefWidth="52.0" style="-fx-background-color: #0081FF; -fx-background-radius: 40; -fx-border-radius: 40; -fx-pref-height: 40; -fx-pref-width: 40;" styleClass="floating-button" text="Button" textAlignment="CENTER">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CAMERA_RETRO" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="231.0" layoutY="621.0" onAction="#handleOk" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: #00A65A;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="meni" prefHeight="580.0" prefWidth="206.0" style="-fx-background-color: black;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.Service.MenuController">
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="112.0" fitWidth="169.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logo-2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="homepage" accessibleText="homepage" layoutX="4.0" layoutY="132.0" prefHeight="62.0" prefWidth="218.0" text="Page d'acceuil" textFill="#fff2f2" />
+      <JFXButton fx:id="services" accessibleText="services" layoutX="8.0" layoutY="186.0" prefHeight="62.0" prefWidth="218.0" text="   Liste des services" textFill="WHITE" />
+      <JFXButton fx:id="addservice" accessibleText="add" layoutX="4.0" layoutY="302.0" prefHeight="62.0" prefWidth="218.0" text="      Ajouter un service" textFill="WHITE" />
+      <JFXButton fx:id="favs" accessibleText="fav" layoutX="5.0" layoutY="364.0" prefHeight="62.0" prefWidth="218.0" text="   Services Favoris" textFill="WHITE" />
+      <JFXButton fx:id="signout" accessibleText="deco" layoutX="13.0" layoutY="488.0" prefHeight="52.0" prefWidth="207.0" text="Déconnexion" textFill="#fffbfb" />
+      <ImageView fitHeight="28.0" fitWidth="35.0" layoutX="40.0" layoutY="149.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="35.0" layoutX="40.0" layoutY="203.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/pet-love-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="35.0" layoutX="39.0" layoutY="319.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/MB__plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="32.0" layoutY="374.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/App%20favorites.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="45.0" layoutY="500.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/makefg.png" />
+         </image>
+      </ImageView>
+      <JFXTextField id="JFXTextField" fx:id="recherche" accessibleText="recherche" focusColor="WHITE" layoutX="71.0" layoutY="431.0" prefHeight="35.0" prefWidth="114.0" promptText="Chercher un service" styleClass="setStyle" stylesheets="@../User/profiluserr.css" unFocusColor="WHITE" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="35.0" layoutY="435.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/search.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="messervices" accessibleText="messervices" layoutY="240.0" prefHeight="62.0" prefWidth="218.0" text="Mes services" textFill="WHITE" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="250.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/icon-reliable-white.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

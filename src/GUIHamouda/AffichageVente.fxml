@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AffichageVenteController">
+   <children>
+      <ImageView fitHeight="463.0" fitWidth="649.0" layoutY="-5.0">
+         <image>
+            <Image url="@../Images/pic2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="signalerbtn" layoutX="266.0" layoutY="346.0" mnemonicParsing="false" onAction="#Signaler" prefHeight="25.0" prefWidth="117.0" text="Signaler annonce" />
+      <Button fx:id="acheterbtn" layoutX="457.0" layoutY="346.0" mnemonicParsing="false" onAction="#Acheter" text="Je veux acheter" />
+      <TableView fx:id="table" layoutX="199.0" layoutY="127.0" prefHeight="200.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="animal" prefWidth="75.0" text="Animal" />
+          <TableColumn fx:id="race" prefWidth="75.0" text="Race" />
+            <TableColumn fx:id="description" prefWidth="210.0" text="Description" />
+            <TableColumn fx:id="prix" prefWidth="53.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Label layoutX="281.0" layoutY="17.0" prefHeight="40.0" prefWidth="273.0" text="Animaux a vendre" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font></Label>
+      <TextField fx:id="seach" layoutX="199.0" layoutY="81.0" prefHeight="25.0" prefWidth="207.0" promptText="recherche" />
+      <ImageView fitHeight="481.0" fitWidth="421.0" layoutX="-303.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/ka7la.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="retour1" layoutX="41.0" layoutY="151.0" mnemonicParsing="false" onAction="#Retour" text="Acceuil" />
+      <Button layoutX="41.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Profil" />
+   </children>
+</AnchorPane>

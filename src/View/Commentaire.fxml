@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CommentaireController">
+   <children>
+      <Label fx:id="id" layoutX="247.0" prefHeight="28.0" prefWidth="204.0" visible="false" />
+      <ListView fx:id="listcom" layoutX="247.0" layoutY="264.0" onMouseClicked="#listCom_Clicked" prefHeight="170.0" prefWidth="571.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#344a5f" height="586.0" layoutX="-18.0" layoutY="-27.0" stroke="BLACK" strokeType="INSIDE" width="258.0" />
+      <ImageView fitHeight="97.0" fitWidth="162.0" layoutX="41.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="Ajouter1" layoutX="-6.0" layoutY="196.0" onAction="#AjouterSujetLink" prefHeight="28.0" prefWidth="247.0" style="-fx-background-color: #72C501;" text="Ajouter sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Ajouter11" layoutX="-2.0" layoutY="253.0" onAction="#AfficherSujet" prefHeight="28.0" prefWidth="243.0" style="-fx-background-color: #72C501;" text="Afficher les sujet" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="commentaire" layoutX="297.0" layoutY="460.0" prefHeight="27.0" prefWidth="246.0" />
+      <JFXButton fx:id="commenter" layoutX="584.0" layoutY="466.0" onAction="#commenter" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: #72C501;" text="Commenter" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="modifier" layoutX="283.0" layoutY="507.0" onAction="#modifier" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: #72C501;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="supprimer" layoutX="443.0" layoutY="507.0" onAction="#supprimer" prefHeight="28.0" prefWidth="122.0" style="-fx-background-color: #72C501;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="American Typewriter" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="262.0" layoutY="40.0" prefHeight="46.0" prefWidth="122.0" text="Titre:" textFill="#701f57">
+         <font>
+            <Font name="American Typewriter" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="titre" layoutX="382.0" layoutY="40.0" prefHeight="46.0" prefWidth="122.0">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="91.0" prefHeight="46.0" prefWidth="147.0" text="Auteur:" textFill="#701f57">
+         <font>
+            <Font name="American Typewriter" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="149.0" prefHeight="46.0" prefWidth="147.0" text="creé le:" textFill="#701f57">
+         <font>
+            <Font name="American Typewriter" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="201.0" prefHeight="46.0" prefWidth="147.0" text="contenu:" textFill="#701f57">
+         <font>
+            <Font name="American Typewriter" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="auteur" layoutX="390.0" layoutY="95.0" prefHeight="46.0" prefWidth="122.0">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" layoutX="405.0" layoutY="141.0" prefHeight="46.0" prefWidth="122.0">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="contenu" layoutX="405.0" layoutY="201.0" prefHeight="46.0" prefWidth="122.0">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="95.0" prefHeight="46.0" prefWidth="122.0" text="Tags:" textFill="#701f57">
+         <font>
+            <Font name="American Typewriter" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="tag" layoutX="523.0" layoutY="153.0" prefHeight="97.0" prefWidth="122.0">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="like" layoutX="563.0" layoutY="14.0" onAction="#LikeAction" prefHeight="27.0" prefWidth="63.0" style="-fx-background-color: #063fdd;" text="like" textFill="#ffffffe5" />
+      <Label fx:id="likes" layoutX="632.0" layoutY="21.0" onDragDetected="#affichagelike" text="Label">
+         <font>
+            <Font name="American Typewriter" size="10.0" />
+         </font></Label>
+      <JFXButton fx:id="Envoyermessage" layoutX="672.0" layoutY="15.0" onAction="#EnvoyerAction" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: #063fdd;" text="Envoyer message" textFill="#ffffffe5">
+         <font>
+            <Font name="American Typewriter" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

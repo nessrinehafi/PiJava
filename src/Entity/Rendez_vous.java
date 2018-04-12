@@ -6,6 +6,7 @@
 package Entity;
 
 import java.sql.Date;
+import javafx.scene.control.DatePicker;
 
 /**
  *
@@ -29,8 +30,7 @@ public class Rendez_vous {
     public Rendez_vous() {
     }
 
-    public Rendez_vous(int Id, String message, String date, String heure, Date createDt, Date updateDt, int demandeur_id, boolean valide, int accepteur_id, boolean remove, String service) {
-        this.Id = Id;
+    public Rendez_vous(String message, String date, String heure, Date createDt, Date updateDt, int demandeur_id, boolean valide, int accepteur_id, boolean remove, String service) {
         this.message = message;
         this.date = date;
         this.heure = heure;
@@ -43,9 +43,25 @@ public class Rendez_vous {
         this.service = service;
     }
     
+    public Rendez_vous(String date, String heure) {
+       
+        this.date = date;
+        this.heure = heure;
+        
+    }
+    
+    public Rendez_vous(boolean valide) {
+       
+        this.valide = valide;
+        
+        
+    }
+
+
+    
     @Override
     public String toString() {
-        return "rendez_vous{" + "Id=" + Id + ", message=" + message + ", date=" + date + ", heure=" + heure + ", createDt=" + createDt + ", updateDt=" + updateDt + ", demandeur_id=" + demandeur_id + ", valide=" + valide + ", accepteur_id=" + accepteur_id + ", remove=" + remove + ", service=" + service + '}';
+        return "rendez_vous{" + "message=" + message + ", date=" + date + ", heure=" + heure + ", createDt=" + createDt + ", updateDt=" + updateDt + ", demandeur_id=" + demandeur_id + ", valide=" + valide + ", accepteur_id=" + accepteur_id + ", remove=" + remove + ", service=" + service + '}';
     }
 
     public int getId() {
@@ -135,6 +151,7 @@ public class Rendez_vous {
     public void setService(String service) {
         this.service = service;
     }
+
     
     
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="sprintjavagui.User.ListeDemandeRoleadminController">
+   <children>
+      <TableView fx:id="table" layoutX="79.0" layoutY="14.0" prefHeight="342.0" prefWidth="443.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="username" prefWidth="132.0" text="Nom de l'utilisateur" />
+            <TableColumn fx:id="nvrole" prefWidth="110.0" text="Role demandé" />
+            <TableColumn fx:id="date" prefWidth="125.0" text="Date de la demande" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="afficher" layoutX="221.0" layoutY="373.0" onAction="#AfficherPage" prefHeight="30.0" prefWidth="123.0" text="Afficher Demande" />
+   </children>
+</AnchorPane>

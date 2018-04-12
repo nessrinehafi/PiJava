@@ -6,6 +6,7 @@
 package Services;
 
 import Entity.Rendez_vous;
+import Entity.User;
 import Utils.Connexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,11 +23,10 @@ import java.util.logging.Logger;
  * @author haythem
  */
 
-    public class CRUD {
+    public class CRUD implements Iservices.crud{
 	Connection c=Connexion.getInstance().getConnexion();
         PreparedStatement ps;
-        Statement s;
-            
+        Statement s;            
 
     public CRUD() {
             try {
@@ -58,8 +58,11 @@ import java.util.logging.Logger;
         
     }
     public void supprimer(int id){
-    String query="DELETE FROM rendez_vous WHERE id = " + id + ";";
-    
+        
+    String query="UPDATE rendez_vous SET remove='"+1+"' where id = "+ id +";";
+	
+       
+        
         try {
             ps=c.prepareStatement(query);
             ps.executeUpdate();
@@ -72,7 +75,7 @@ import java.util.logging.Logger;
     
     public void modifier(Rendez_vous r, int id){
         
-    String query="UPDATE rendez_vous SET message='"+r.getMessage()+"',date='"+r.getDate()+"',heure='"+r.getHeure()+"' where id = "+ id +";";
+    String query="UPDATE rendez_vous SET date='"+r.getDate()+"',heure='"+r.getHeure()+"' where id = "+ id +";";
 	
         try {
             ps=c.prepareStatement(query);
@@ -82,9 +85,27 @@ import java.util.logging.Logger;
         }
         
     }
-    public List<Rendez_vous> afficheall(){
+    
+    public void valider(Rendez_vous r, int id){
+        
+        String query="UPDATE rendez_vous SET valide='"+1+"' where id = "+ id +";";
+	
+       
+        
+        try {
+            ps=c.prepareStatement(query);
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(Rendez_vous.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    public List<Rendez_vous> afficheallrdv(){
         
     List<Rendez_vous> list=new ArrayList<Rendez_vous>();
+    
+    
     
     String query="select * from rendez_vous";
        
@@ -114,5 +135,102 @@ import java.util.logging.Logger;
         }
         return list;
     }
+    
+      public List<User> affichealluser(){
+        
+    List<User> list=new ArrayList<User>();
+    
+    
+    
+    String query="select * from User";
+       
+    try {
+            ResultSet rs=s.executeQuery(query);
+            while(rs.next()){
+                
+            User user=new User();
+            
+            user.setId(rs.getInt(1));
+            user.setUsername(rs.getString(2));
+            user.setUsername_canonical(rs.getString(3));
+            user.setEmail(rs.getString(4));
+            user.setEmail_canonical(rs.getString(5));
+            user.setEnabled(rs.getBoolean(6));
+            user.setSalt(rs.getString(7));
+            user.setPassword(rs.getString(8));
+            user.setLast_login(rs.getDate(9));
+            user.setConfirmation_token(rs.getString(10));
+            user.setPassword_requested_at(rs.getString(11));
+            user.setRoles(rs.getString(12));
+            user.setNom(rs.getString(13));
+            user.setPrenom(rs.getString(14));
+            user.setNumtel(rs.getInt(15));
+            user.setAdresse(rs.getString(17));
+            user.setRole(rs.getString(19));
+            
+            user.setLongitude(rs.getString(20));
+            user.setLatitude(rs.getString(21));
+            
+            
+            
+            
+            list.add(user);
+            
+                }
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+      
+      
+        
+      public User getMail(int id){
+        
+     String query="select * from User where id = "+ id +";";
+     
+     User user = new User();
+       
+    try {
+            ResultSet rs=s.executeQuery(query);
+            while(rs.next()){
+                
+            
+            
+          
+            user.setId(rs.getInt(1));
+            user.setUsername(rs.getString(2));
+            user.setUsername_canonical(rs.getString(3));
+            user.setEmail(rs.getString(4));
+            user.setEmail_canonical(rs.getString(5));
+            user.setEnabled(rs.getBoolean(6));
+            user.setSalt(rs.getString(7));
+            user.setPassword(rs.getString(8));
+            user.setLast_login(rs.getDate(9));
+            user.setConfirmation_token(rs.getString(10));
+            user.setPassword_requested_at(rs.getString(11));
+            user.setRoles(rs.getString(12));
+            user.setNom(rs.getString(13));
+            user.setPrenom(rs.getString(14));
+            user.setNumtel(rs.getInt(15));
+            user.setAdresse(rs.getString(17));
+            user.setRole(rs.getString(19));
+            
+            user.setLongitude(rs.getString(20));
+            user.setLatitude(rs.getString(21));
+            
+            
+            
+
+                }
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return user;    
+       
+        
+    }
+      
+     
     
 }

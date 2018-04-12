@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignalementController">
+   <children>
+      <ImageView fitHeight="463.0" fitWidth="649.0" layoutY="-5.0">
+         <image>
+            <Image url="@../Images/pic2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="retour" layoutX="6.0" layoutY="2.0" mnemonicParsing="false" onAction="#Retour" text="Acceuil" />
+      <Label fx:id="l1" layoutX="66.0" layoutY="27.0" prefHeight="37.0" prefWidth="469.0" text="On va prendre en compte votre signal mais veuillez s'il vous plait mentionner les raisons!" textFill="#f8f4f4">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Button fx:id="signaler" layoutX="271.0" layoutY="150.0" mnemonicParsing="false" onAction="#Signaler" text="Signaler" />
+      <Label fx:id="l2" layoutX="14.0" layoutY="123.0" text="Veuillez choisir les raisons pour lequelles vous voulez signaler cette annonce s'il vous plait: " textFill="#f8eaea" />
+      <ComboBox fx:id="cb" layoutX="51.0" layoutY="150.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

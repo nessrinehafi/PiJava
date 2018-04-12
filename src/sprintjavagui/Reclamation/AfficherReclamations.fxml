@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sprintjavagui.Reclamation.AfficherReclamationsController">
+   <children>
+      <Label layoutX="74.0" layoutY="14.0" prefHeight="40.0" prefWidth="517.0" text="Tableau de bord des réclamations" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="accueil" layoutX="74.0" layoutY="372.0" mnemonicParsing="false" onAction="#accueilButtonAction" text="Menu" />
+      <Button fx:id="creer" layoutX="410.0" layoutY="372.0" mnemonicParsing="false" onAction="#creerButtonAction" text="Créer une Réclamation" />
+      <TextField fx:id="search" layoutX="570.0" layoutY="94.0" prefHeight="25.0" prefWidth="77.0" promptText="Search" />
+      <Button layoutX="190.0" layoutY="374.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="180.0" text="Exporter vos Réclamations sous format Excel" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+      <JFXTreeTableView fx:id="reclamationTableId" layoutX="10.0" layoutY="127.0" prefHeight="238.0" prefWidth="646.0" />
+   </children>
+</AnchorPane>

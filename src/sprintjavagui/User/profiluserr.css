@@ -1,0 +1,58 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+/*.jfx-hamburger StackPane {
+        -fx-background-color: white;
+}*/
+
+/*#AnchorPane{
+    -fx-background-image: url("/images/pug-dog-and-cat-with-bone-fish-bones-paw-prints-and-ball-seamless-pattern-vector-background_7688-21.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}*/
+.bodybg{
+    -fx-background-image: url("/images/pug-dog-and-cat-with-bone-fish-bones-paw-prints-and-ball-seamless-pattern-vector-background_7688-21.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 757 509;
+    -fx-background-position: center center;
+    
+}
+
+.bodybgg{
+    -fx-background-image: url("/images/pug-dog-and-cat-with-bone-fish-bones-paw-prints-and-ball-seamless-pattern-vector-background_7688-21.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 757 580;
+    -fx-background-position: center center;
+    
+}
+.listbg{
+    -fx-background-image: url("/images/pug-dog-and-cat-with-bone-fish-bones-paw-prints-and-ball-seamless-pattern-vector-background_7688-21.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1200 580;
+    -fx-background-position: center center;
+    
+}
+
+
+/*.BGPane{
+  background: rgba(0, 0, 0, 0.5);
+}*/
+
+.my-style {
+    -fx-background-color: rgba(255, 255, 255, .7); 
+}
+/*.JFXTextField {
+        
+}*/
+JFXTextField.setStyle{
+    -fx-text-inner-color: white;
+-fx-prompt-text-fill: white;
+}
+

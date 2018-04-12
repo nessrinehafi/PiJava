@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DemandeController">
+   <children>
+      <ImageView fitHeight="463.0" fitWidth="649.0" layoutY="-5.0">
+         <image>
+            <Image url="@../Images/pic2.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table1" layoutX="63.0" layoutY="47.0" prefHeight="142.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="animal1" prefWidth="55.0" text="Animal" />
+          <TableColumn fx:id="categorie" minWidth="0.0" prefWidth="66.0" text="Categorie" />
+            <TableColumn fx:id="q1" prefWidth="104.0" text="Pourquoi on veut adopter votre animal" />
+            <TableColumn fx:id="q2" prefWidth="123.0" text="Est ce que vous avez d'autres animaux a la maison?" />
+            <TableColumn fx:id="q3" prefWidth="114.0" text="Comment nous garantir que vous allez bien vous occupez de cet animal" />
+            <TableColumn fx:id="numero1" prefWidth="78.0" text="Numero de la personne en question" />
+        </columns>
+      </TableView>
+      <Button fx:id="retour" layoutY="6.0" mnemonicParsing="false" onAction="#Retour" text="Retour" />
+      <Label layoutX="63.0" layoutY="18.0" prefHeight="17.0" prefWidth="156.0" text="Mes Demandes d'Adoption" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TableView fx:id="table2" layoutX="63.0" layoutY="279.0" prefHeight="115.0" prefWidth="540.0">
+         <columns>
+            <TableColumn fx:id="animal2" prefWidth="75.0" text="Animal" />
+            <TableColumn fx:id="categorie2" prefWidth="74.0" text="Categorie" />
+            <TableColumn fx:id="q7" prefWidth="76.0" text="Comment comptez vous payez ?" />
+            <TableColumn fx:id="q8" prefWidth="123.0" text="c'est quoi les delais de paiement" />
+            <TableColumn fx:id="prixSecondaire" prefWidth="102.0" text="Prix secondaire" />
+            <TableColumn fx:id="numero2" prefWidth="90.0" text="Numero de la personne en question" />
+         </columns>
+      </TableView>
+      <Label layoutX="63.0" layoutY="243.0" prefHeight="17.0" prefWidth="156.0" text="Mes Demandes de vente" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="valider1" layoutX="394.0" layoutY="200.0" mnemonicParsing="false" onAction="#Valider1" text="Valider operation" />
+      <Button fx:id="supprimer1" layoutX="520.0" layoutY="200.0" mnemonicParsing="false" onAction="#Supprimer1" text="Ignorer" />
+      <Button fx:id="valider2" layoutX="414.0" layoutY="403.0" mnemonicParsing="false" onAction="#Valider2" text="Valider operation" />
+      <Button fx:id="supprimer2" layoutX="548.0" layoutY="403.0" mnemonicParsing="false" onAction="#Supprimer2" text="Ignorer" />
+   </children>
+</AnchorPane>

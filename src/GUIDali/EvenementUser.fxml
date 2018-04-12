@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="684.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EvenementUserController">
+   <children>
+      <JFXTabPane layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="684.0" prefWidth="1105.0" rotateGraphic="true" style="-fx-border-color: #00539C;" stylesheets="@../styles/styles.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab onSelectionChanged="#initialize" text="All ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6173228346456693" orientation="VERTICAL" prefHeight="649.0" prefWidth="1105.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="1103.0">
+                                 <children>
+                                    <TextField fx:id="txtsearch" layoutX="20.0" layoutY="14.0" onKeyPressed="#HandelSearch" prefHeight="30.0" prefWidth="302.0" promptText="Search event by name" styleClass="search-box" />
+                                    <JFXListView fx:id="listView" layoutX="203.0" layoutY="29.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0" />
+                                    <Button fx:id="add" layoutX="384.0" layoutY="11.0" mnemonicParsing="false" onAction="#toadd" opacity="0.44" prefHeight="37.0" prefWidth="336.0" styleClass="lgBtn" text="Add" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="1103.0">
+                                 <children>
+                                    <HBox fx:id="details" layoutX="30.0" layoutY="14.0" prefHeight="210.0" prefWidth="1043.0" spacing="30.0">
+                                       <children>
+                                          <GridPane prefHeight="208.0" prefWidth="343.0" styleClass="card">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="212.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="249.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="52.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="178.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="21.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label />
+                                                <Label prefHeight="20.0" prefWidth="161.0" GridPane.rowIndex="6" />
+                                                <Label fx:id="lbllontitude" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="ID No 30229182" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="lblnom" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="lblnom" visible="false" GridPane.columnIndex="1" />
+                                                <Label fx:id="lbldateDeb" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Daniel" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="lblDateFin" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Mungatana" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="lblnnbplace" prefHeight="20.0" prefWidth="160.0" styleClass="green-label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="lbltype" text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="lbllatitude" text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font size="54.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </GridPane>
+                                          <VBox prefHeight="210.0" prefWidth="527.0">
+                                             <children>
+                                                <JFXButton fx:id="btnreserver" buttonType="RAISED" onAction="#handleReserverEvent" opacity="0.77" prefHeight="77.0" prefWidth="387.0" style="-fx-background-color: rgb(0, 166, 90); -fx-text-fill: white; -fx-font-size: 42; -fx-font-weight: bold;" stylesheets="@../styles/styles.css" text="Participate" />
+                                                <GridPane prefHeight="172.0" prefWidth="520.0" styleClass="card" visible="false">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="316.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="TOP_LEFT" prefHeight="104.0" prefWidth="136.0" text="Descritption" />
+                                                      <Label fx:id="lbldesc" alignment="TOP_LEFT" prefHeight="104.0" prefWidth="352.0" styleClass="yellow-label" text="Cardiologist" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab onSelectionChanged="#MesReservation" text="Upcoming">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6173228346456693" orientation="VERTICAL" prefHeight="649.0" prefWidth="1105.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="1103.0">
+                                 <children>
+                                    <TextField fx:id="txtsearch1" layoutX="787.0" layoutY="14.0" onKeyPressed="#HandelSearch" prefHeight="30.0" prefWidth="302.0" promptText="Search event by name" styleClass="search-box" />
+                                    <JFXListView fx:id="listView1" layoutX="203.0" layoutY="29.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="1103.0">
+                                 <children>
+                                    <HBox fx:id="details1" layoutX="30.0" layoutY="14.0" prefHeight="210.0" prefWidth="1043.0" spacing="30.0">
+                                       <children>
+                                          <GridPane prefHeight="210.0" prefWidth="836.0" styleClass="card">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="213.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="248.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="48.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="114.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="178.0" minHeight="0.0" prefHeight="178.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="20.0" prefWidth="161.0" GridPane.rowIndex="6" />
+                                                <Label fx:id="lbllontitude1" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="ID No 30229182" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="lblnom1" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="lblnom" visible="false" GridPane.columnIndex="1" />
+                                                <Label fx:id="lbldateDeb1" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Daniel" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="lblDateFin1" prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Mungatana" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="lblnnbplace1" prefHeight="20.0" prefWidth="300.0" styleClass="green-label" text="0717160344" textAlignment="CENTER" textFill="#137db2d6" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font size="39.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbltype1" text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="lbllatitude1" text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity" GridPane.rowIndex="6">
+                                                   <font>
+                                                      <Font size="55.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                                             </children>
+                                          </GridPane>
+                                          <VBox prefHeight="175.0" prefWidth="518.0">
+                                             <children>
+                                                <GridPane prefHeight="172.0" prefWidth="520.0" styleClass="card" visible="false">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="316.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="TOP_LEFT" prefHeight="104.0" prefWidth="136.0" text="Descritption" />
+                                                      <Label fx:id="lbldesc1" alignment="TOP_LEFT" prefHeight="104.0" prefWidth="352.0" styleClass="yellow-label" text="Cardiologist" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

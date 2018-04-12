@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListevetInterfaceController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="878.0">
+         <children>
+            <TableView fx:id="table" layoutX="48.0" layoutY="166.0" prefHeight="200.0" prefWidth="739.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="55.0" text="id" />
+                  <TableColumn fx:id="nom" prefWidth="98.0" text="nom" />
+                  <TableColumn fx:id="prenom" prefWidth="103.0" text="prenom" />
+                  <TableColumn fx:id="numtel" prefWidth="135.0" text="numtel" />
+                  <TableColumn fx:id="email" prefWidth="135.0" text="email" />
+                  <TableColumn fx:id="adresse" minWidth="0.0" prefWidth="99.0" text="adresse" />
+               </columns>
+            </TableView>
+            <Label layoutX="282.0" layoutY="104.0" prefHeight="21.0" prefWidth="247.0" text="         La liste des vétérinaires" />
+            <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#Accueil" text="Accueil" />
+            <Button fx:id="rdvattenteuser" layoutX="302.0" layoutY="25.0" mnemonicParsing="false" onAction="#rdvattente" text="Mes rendez-vous en attente" />
+            <Button layoutX="547.0" layoutY="25.0" mnemonicParsing="false" onAction="#rdvuser" text="Mes rendez-vous" />
+            <Button layoutX="711.0" layoutY="25.0" mnemonicParsing="false" onAction="#deco" text="Deconnexion" />
+            <Button layoutX="126.0" layoutY="25.0" mnemonicParsing="false" onAction="#rdv" text="Liste des categories" />
+            <Button fx:id="listerdvvalider" layoutX="302.0" layoutY="25.0" mnemonicParsing="false" onAction="#listerdvvalider" prefHeight="31.0" prefWidth="206.0" text="Mes rendez-vous à validé" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="prendrerdv" layoutX="535.0" layoutY="120.0" mnemonicParsing="false" onAction="#prendrerdv" text="Prendre un rendez-vous" />
+      <Button fx:id="Destination" layoutX="734.0" layoutY="120.0" mnemonicParsing="false" onAction="#Destination" text="Destination" />
+      <TextField fx:id="search" layoutX="43.0" layoutY="120.0" promptText="Search" />
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="1100.0" prefWidth="2300.0">
+         <children>
+            <ImageView fitHeight="1100.0" fitWidth="2300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/progress.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table1" layoutX="386.0" layoutY="342.0" prefHeight="335.0" prefWidth="1109.0">
+               <columns>
+                  <TableColumn fx:id="id1" prefWidth="63.99993896484375" text="N°" />
+                  <TableColumn fx:id="nom1" prefWidth="101.00003051757812" text="Nom" />
+                  <TableColumn fx:id="prenom1" prefWidth="100.0" text="Prenom" />
+                  <TableColumn fx:id="numtel1" prefWidth="150.0" text="N° telephone" />
+                  <TableColumn fx:id="email1" prefWidth="159.0" text="E-mail" />
+                  <TableColumn fx:id="adresse1" minWidth="0.0" prefWidth="166.0" text="Adresse" />
+               </columns>
+            </TableView>
+            <Label layoutX="620.0" layoutY="160.0" prefHeight="53.0" prefWidth="563.0" text="         La liste des vétérinaires " textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="348.0" layoutY="51.0" mnemonicParsing="false" onAction="#Accueil" prefHeight="51.0" prefWidth="165.0" text="Accueil">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="rdvattenteuser" layoutX="901.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdvattente" prefHeight="51.0" prefWidth="412.0" text="Mes rendez-vous en attente">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="1380.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdvuser" prefHeight="51.0" prefWidth="249.0" text="Mes rendez-vous">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="560.0" layoutY="51.0" mnemonicParsing="false" onAction="#rdv" prefHeight="51.0" prefWidth="287.0" text="Liste des categories">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="prendrerdv" layoutX="993.0" layoutY="252.0" mnemonicParsing="false" onAction="#prendrerdv" text="Prendre un rendez-vous">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="Destination" layoutX="1326.0" layoutY="252.0" mnemonicParsing="false" onAction="#Destination" prefHeight="51.0" prefWidth="165.0" text="Destination">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="search1" layoutX="399.0" layoutY="252.0" promptText="Search">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Button fx:id="listerdvvalider" layoutX="901.0" layoutY="51.0" mnemonicParsing="false" onAction="#listerdvvalider" prefHeight="51.0" prefWidth="412.0" text="Mes rendez-vous à validé">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="350.0" fitWidth="321.0" layoutX="21.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/large.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="329.0" fitWidth="328.0" layoutX="1533.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/superthumb%20(1).jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
